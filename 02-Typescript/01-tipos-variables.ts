@@ -54,12 +54,21 @@ interface UsuarioDos {
     mNombre: String;
     mEdad: Number;
     mCedula: String;
+    imprimirEnConsola(nombre:String):void;
+    usuario:Usuario;
 }
 
-
 let  usuarioCuatro: UsuarioDos;
-usuarioCuatro = {
-    m
+/*usuarioCuatro = {
+}
+*/
+
+class UsuarioTres {
+    constructor(public mNombre: String,
+                private mEdad: Number,
+                protected mCedula: String){
+        
+    }
 }
 
 
