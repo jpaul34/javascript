@@ -21,7 +21,6 @@ class Usuario {
     private mEdad: Number;
     protected mCedula: String;
 
-
     constructor( nombre: String,
                  edad: Number,
                  cedula: String){
@@ -38,9 +37,37 @@ class Usuario {
         ${this.mEdad}`);
     }
 
-
 }
 
 let usuario: Usuario = new Usuario('jonathan', 23, '123456789');
+let usuarioOtro = {nombre: 'jonathan',edad: 23, cedula: '123456789'};
+
 console.log(usuario);
+console.log(usuarioOtro);
+
+function noHagoNada(){}
+console.log('No hago nada: ', noHagoNada());
+
+let usuarioDos:Usuario;
+
+interface UsuarioDos {
+    mNombre: String;
+    mEdad: Number;
+    mCedula: String;
+}
+
+
+let  usuarioCuatro: UsuarioDos;
+usuarioCuatro = {
+    m
+}
+
+
+
+
+
+
+
+
+
 

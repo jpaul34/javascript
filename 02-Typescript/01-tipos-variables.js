@@ -23,4 +23,13 @@ var Usuario = /** @class */ (function () {
     return Usuario;
 }());
 var usuario = new Usuario('jonathan', 23, '123456789');
+var usuarioOtro = { nombre: 'jonathan', edad: 23, cedula: '123456789' };
 console.log(usuario);
+console.log(usuarioOtro);
+function noHagoNada() { }
+console.log('No hago nada: ', noHagoNada());
+var usuarioDos;
+var usuarioCuatro;
+usuarioCuatro = {
+    m: m
+};
