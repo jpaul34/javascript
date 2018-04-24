@@ -37,3 +37,13 @@ arregloNumero.forEach(
     }
 );
 
+
+let resultadodDeLaSuma = arregloNumero.reduce(
+    (totalAcumulado, valorArreglo)=>{     //recive dos aprametros el total acumulado y el valor del arreglo
+        return totalAcumulado + valorArreglo;
+    },
+    0
+);
+
+console.log('resultadoDeLasuma', resultadodDeLaSuma);
+
