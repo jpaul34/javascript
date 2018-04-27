@@ -32,7 +32,7 @@ var arregloDeUsuarios = [
     },
     {
         nombre: 'Paul',
-        edad: 10
+        edad: 100
     },
     {
         nombre: 'Andres',
@@ -40,7 +40,7 @@ var arregloDeUsuarios = [
     },
     {
         nombre: 'Juan',
-        edad: 32,
+        edad: 32
     },
     {
         nombre: 'Andrea',
@@ -65,6 +65,15 @@ var usuariosConCincoAñosMenos = arregloDeUsuarios
     .filter(function (usuario) {
     //true se devuleve , false no se devulve
     return (usuario.deuda < 100);
+})
+    /*.every( // Es un AND    por cada item q tiene ene l arreglo se verifica el return si todos los elementos cumplen devuelve  True
+        (usuario: UsuarioArreglo)=>{
+            return (usuario.edad >= 18);
+        }
+    )*/
+    .some(// Es un OR    por cada item q tiene en el arreglo se verifica el return si almenos un elemento cumple  devuelve  True
+function (usuario) {
+    return (usuario.edad <= 18);
 });
 console.log('\n-------------\nusuariosConCincoAñosMenos', usuariosConCincoAñosMenos);
 // Operador Filter ---> se péude concatenar a otros operadores

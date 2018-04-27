@@ -3,9 +3,6 @@ let arregloNumero = [1,2,3,4,5];
 let arregloDeudas = [13,185,15,585,8,15,58,5,52,2,56,55];
 
 
-
-
-
 let sumarDosNumeros = (numeroUno: number,
                        numeroDos: number) => { //Fat arrow funtc
     return numeroUno + numeroDos;
@@ -64,7 +61,7 @@ let arregloDeUsuarios: Array <UsuarioArreglo> = [
 
     {
         nombre: 'Paul',
-        edad: 10
+        edad: 100
     },
     {
         nombre: 'Andres',
@@ -102,7 +99,8 @@ function calcularDeudaDeUsuario(edad: number) {
     return arregloDeudas.reduce(
         (totalAcumulado, deuda: number)=>{
             return totalAcumulado + ((edad)/100)*deuda;
-        },0);
+        },
+        0);
 }
 
 
@@ -118,11 +116,26 @@ let usuariosConCincoAñosMenos = arregloDeUsuarios
         //true se devuleve , false no se devulve
         return (usuario.deuda<100);
     })
+    /*.every( // Es un AND    por cada item q tiene ene l arreglo se verifica el return si todos los elementos cumplen devuelve  True
+        (usuario: UsuarioArreglo)=>{
+            return (usuario.edad >= 18);
+        }
+    )*/
+    .some( // Es un OR    por cada item q tiene en el arreglo se verifica el return si almenos un elemento cumple  devuelve  True
+        (usuario: UsuarioArreglo)=>{
+            return (usuario.edad <= 18);
+        }
+    )
 ;
+
+
 
 console.log('\n-------------\nusuariosConCincoAñosMenos', usuariosConCincoAñosMenos);
 
 // Operador Filter ---> se péude concatenar a otros operadores
+
+
+
 
 
 
